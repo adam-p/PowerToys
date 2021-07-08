@@ -19,6 +19,23 @@
                     WindowStartupLocation="CenterOwner"
                     Closed="OnClosed">
     <Grid>
+        <local:MyButton x:Name="newZoneButton2"
+                    AutomationProperties.LabeledBy="{Binding ElementName=newZoneName}"
+                    HorizontalAlignment="Stretch"
+                    Height="64"
+                    Width="64"
+                    ui:ControlHelper.CornerRadius="64"
+                    Margin="0,8,0,0"
+                    Style="{StaticResource AccentButtonStyle}"
+                    FontFamily="Segoe MDL2 Assets"
+                    Content="&#xE109;"
+                    FontSize="24"
+                    TabIndex="0"
+                    ToolTip="{x:Static props:Resources.Add_zone}"
+                    DataContext="{Binding Path=Model, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Window}}"
+                    IsEnabled="{Binding IsZoneAddingAllowed}"
+                    />
+
         <Grid Height="36"
               Background="{DynamicResource SecondaryBackgroundBrush}"
               Margin="0,-36,0,0"
